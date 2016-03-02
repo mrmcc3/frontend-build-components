@@ -1,5 +1,5 @@
-(defproject mrmcc3/frontend-build-components "0.1.0-SNAPSHOT"
-  :description "Frontend Build Components"
+(defproject mrmcc3/frontend-build-components "0.1.0"
+  :description "Components for building front-end projects with clojure"
   :url "https://github.com/mrmcc3/frontend-build-components"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
