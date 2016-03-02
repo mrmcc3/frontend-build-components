@@ -3,4 +3,7 @@
   :url "https://github.com/mrmcc3/frontend-build-components"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.8.0"]])
+  :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
+                 [com.stuartsierra/component "0.3.1"]
+                 [figwheel-sidecar "0.5.0-6"]
+                 [mrmcc3/libsass-clj "0.1.4"]])
