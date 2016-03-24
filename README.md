@@ -2,7 +2,7 @@
 
 Components for building front-end projects with clojure
 
-![Clojars Project](https://img.shields.io/clojars/v/mrmcc3/frontend-build-components.svg)
+[![Clojars Project](https://img.shields.io/clojars/v/mrmcc3/frontend-build-components.svg)](https://clojars.org/mrmcc3/frontend-build-components)
 
 WIP
 
