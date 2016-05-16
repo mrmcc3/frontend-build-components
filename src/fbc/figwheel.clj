@@ -1,6 +1,7 @@
 (ns fbc.figwheel
   (:require [figwheel-sidecar.repl-api :as fig]
-            [com.stuartsierra.component :as component]))
+            [com.stuartsierra.component :as component]
+            [suspendable.core :refer [Suspendable]]))
 
 (defrecord Figwheel [config autobuild]
   component/Lifecycle
@@ -16,6 +17,21 @@
         (fig/stop-autobuild :default))
       (fig/clean-builds :default)
       (fig/stop-figwheel!))
+    this)
+  Suspendable
+  (suspend [this]
+    (when (fig/figwheel-running?)
+      (when autobuild
+        (fig/stop-autobuild :default)))
+    this)
+  (resume [this old]
+    (if (fig/figwheel-running?)
+      (if (= (:config this) (:config old))
+        (if autobuild
+          (fig/start-autobuild :default)
+          (fig/build-once :default))
+        (do (component/stop old) (component/start this)))
+      (component/start this))
     this))
 
 (defn figwheel [cfg]

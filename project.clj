@@ -7,5 +7,6 @@
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
                  [org.clojure/clojurescript "1.8.51" :scope "provided"]
                  [com.stuartsierra/component "0.3.1"]
+                 [suspendable "0.1.1"]
                  [figwheel-sidecar "0.5.3-1"]
                  [mrmcc3/libsass-clj "0.2.0-SNAPSHOT"]])
