@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :repositories [["clojars" {:sign-releases false}]]
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
-                 [org.clojure/clojurescript "1.8.34" :scope "provided"]
+                 [org.clojure/clojurescript "1.8.51" :scope "provided"]
                  [com.stuartsierra/component "0.3.1"]
-                 [figwheel-sidecar "0.5.1"]
-                 [mrmcc3/libsass-clj "0.1.4"]])
+                 [figwheel-sidecar "0.5.3-1"]
+                 [mrmcc3/libsass-clj "0.2.0-SNAPSHOT"]])
