@@ -1,5 +1,6 @@
 (ns fbc.cljs
   (:require [com.stuartsierra.component :as component]
+            [suspendable.core :refer [Suspendable]]
             [clojure.java.io :as io]
             [cljs.build.api :as cljs]))
 
@@ -16,7 +17,14 @@
     this)
   (stop [this]
     (clean opts)
-    this))
+    this)
+  Suspendable
+  (suspend [this]
+    this)
+  (resume [this old]
+    (when-not (= (:opts this) (:opts old))
+      (component/stop old))
+    (component/start this)))
 
 (defn cljs-compiler [cfg]
   (map->CljsCompiler
