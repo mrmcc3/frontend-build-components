@@ -16,7 +16,7 @@
   (stop [this]
     (when watcher (hawk/stop! watcher))
     (sass/clean source-paths compiler-opts)
-    this))
+    (assoc this :watcher nil)))
 
 (defn sass-compiler [cfg]
   (map->SassCompiler

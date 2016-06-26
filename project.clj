@@ -1,4 +1,4 @@
-(defproject mrmcc3/frontend-build-components "0.1.2-SNAPSHOT"
+(defproject mrmcc3/frontend-build-components "0.1.2"
   :description "Components for building front-end projects with clojure"
   :url "https://github.com/mrmcc3/frontend-build-components"
   :license {:name "Eclipse Public License"
@@ -10,5 +10,5 @@
                  [com.stuartsierra/component "0.3.1"]
                  [suspendable "0.1.1"]
                  [figwheel-sidecar "0.5.4-4"]
-                 [mrmcc3/libsass-clj "0.1.5"]
+                 [mrmcc3/libsass-clj "0.1.7"]
                  [hawk "0.2.10"]])

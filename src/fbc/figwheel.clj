@@ -34,11 +34,12 @@
       (component/start this))
     this))
 
-
 (defn figwheel [cfg]
   (let [autobuild (get-in cfg [:figwheel :autobuild])
         build-id (if autobuild "default" "no-autobuild")
-        build (assoc (:cljs cfg) :id "default" :figwheel autobuild)
+        build (-> (:cljs cfg)
+                  (assoc :id "default" :figwheel autobuild)
+                  (update-in [:compiler :optimizations] #(if (nil? %1) :none %1)))
         options (dissoc (:figwheel cfg) :autobuild)]
     (map->Figwheel
       {:autobuild autobuild
