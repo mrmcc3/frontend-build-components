@@ -1,4 +1,4 @@
-(defproject mrmcc3/frontend-build-components "0.1.3"
+(defproject mrmcc3/frontend-build-components "0.1.4-SNAPSHOT"
   :description "Components for building front-end projects with clojure"
   :url "https://github.com/mrmcc3/frontend-build-components"
   :license {:name "Eclipse Public License"
